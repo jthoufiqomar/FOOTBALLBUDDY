@@ -1,0 +1,351 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use a visually appealing font */
+    margin: 0;
+    padding: 0;
+    background-color: #e6f2ff; /* Light blue background */
+    color: #333; /* Dark gray text */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background: #1e3a8a; /* Dark blue header */
+    color: #fff; /* White text */
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: 3px solid #e8491d; /* Orange border */
+}
+
+header a {
+    color: #2ecc71; /* Vibrant green text */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: #e8491d; /* Orange highlight */
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #e8491d; /* Orange hover */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Adjust logo size */
+    margin-right: 10px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Make the menu horizontal */
+    align-items: center; /* Vertically center the items */
+}
+
+nav li {
+    margin-right: 20px; /* Add spacing between menu items */
+}
+
+nav a {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+nav a:hover {
+    background-color: #e8491d; /* Orange hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.next-match {
+    text-align: center;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #e8491d; /* Orange button */
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.search-bar button:hover {
+    background-color: #35424a; /* Dark blue hover */
+}
+
+/* Featured Video Styles */
+.featured-video {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Latest News Styles */
+.latest-news {
+    margin-top: 20px;
+}
+
+.news-carousel {
+    display: flex;
+    overflow-x: auto;
+}
+
+.news-item {
+    min-width: 300px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* CTA Styles */
+.cta {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cta button {
+    padding: 10px 15px;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.cta button:hover {
+    background-color: #35424a; /* Dark blue hover */
+}
+
+/* News Styles */
+.news {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.news-item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.news-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.news-item .date {
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.news-item a {
+    color: #e8491d; /* Orange link */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.news-item a:hover {
+    color: #35424a; /* Dark blue hover */
+}
+
+/* Players Styles */
+.players {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-filter input,
+.search-filter select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.player-card {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.player-card img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.player-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.player-card a {
+    color: #e8491d; /* Orange link */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.player-card a:hover {
+    color: #35424a; /* Dark blue hover */
+}
+
+/* Blog Styles */
+.blog-post {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.blog-post h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.blog-post .date {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.blog-post a {
+    color: #e8491d; /* Orange link */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.blog-post a:hover {
+    color: #35424a; /* Dark blue hover */
+}
+
+/* Footer Styles */
+.footer {
+    background: #1e3a8a; /* Dark blue footer */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}

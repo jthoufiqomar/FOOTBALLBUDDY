@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootballBuddy - Players</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/img/logo.png" alt="FootballBuddy Logo">
+            <h1>FootballBuddy</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="scores.html">Scores</a></li>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">More Pages</a>
+                    <div class="dropdown-content">
+                        <a href="news.html">News</a>
+                        <a href="scores.html">Scores</a>
+                        <a href="teams.html">Teams</a>
+                        <a href="players.html">Players</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="players">
+            <h2>Football Players</h2>
+            <div class="search-filter">
+                <input type="text" id="search-input" placeholder="Search players...">
+                <select id="position-filter">
+                    <option value="">All Positions</option>
+                    <option value="forward">Forward</option>
+                    <option value="midfielder">Midfielder</option>
+                    <option value="defender">Defender</option>
+                    <option value="goalkeeper">Goalkeeper</option>
+                </select>
+            </div>
+            <div class="player-grid" id="player-grid">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 FootballBuddy</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/players.js"></script>
+</body>
+</html>
