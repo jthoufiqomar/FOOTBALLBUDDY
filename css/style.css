@@ -175,12 +175,27 @@ nav a:hover {
 
 /* Latest News Styles */
 .latest-news {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    max-width: 700px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 2rem 1rem;
+}
+
+.latest-news h2 {
+    text-align: center;
 }
 
 .news-carousel {
     display: flex;
     overflow-x: auto;
+    width: 100%;
+    max-width: 600px;
 }
 
 .news-item {
@@ -348,4 +363,34 @@ nav a:hover {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+}
+
+/* Youtube Section Styles */
+.youtube-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    max-width: 700px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 2rem 1rem;
+}
+
+.youtube-section h2 {
+    text-align: center;
+}
+
+#youtube-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.youtube-link-input {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
 }

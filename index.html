@@ -69,16 +69,27 @@
             </div>
         </section>
 
-        <section class="cta">
+
+        <!-- YouTube Section -->
+        <section class="youtube-section">
+            <h2>Watch Highlights</h2>
+            <div id="youtube-container">
+                <iframe id="youtube-frame" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="youtube-link-input">
+                <input type="text" id="youtube-url" placeholder="Paste YouTube video URL here">
+                <button onclick="updateYouTubeLink()">Change Video</button>
+            </div>
+        </section>
+    </main>
+    <section class="cta">
             <h2>Get the Latest Football Updates</h2>
             <button>Subscribe Now</button>
             <button>Follow Us</button>
         </section>
-    </main>
 
     <footer class="footer">
         <p>&copy; 2025 FootballBuddy</p>
-        <p>Repository Link: <a href="https://github.com/your-username/FOOTBALLBUDDY.git">GitHub - FootballBuddy</a></p>
     </footer>
 
     <script src="js/script.js"></script>
