@@ -12,8 +12,9 @@
             <img src="assets/img/logo.png" alt="FootballBuddy Logo">
             <h1>FootballBuddy</h1>
         </div>
+        <button class="mobile-nav-toggle" aria-label="Open navigation" onclick="toggleMobileNav()">&#9776;</button>
         <nav>
-            <ul>
+            <ul id="main-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="news.html">News</a></li>
                 <li><a href="scores.html">Scores</a></li>
@@ -24,19 +25,22 @@
                     <a href="#" class="dropbtn">More Pages</a>
                     <div class="dropdown-content">
                         <a href="about.html">About Us</a>
-                    <a href="contact.html">Contact Us</a>
-                    <a href="feedback.html">Feedback</a>
-                    <a href="subscribe.html">Subscribe</a>
-                    <a href="signup.html">Sign Up</a>
-                    <a href="signin.html">Sign In</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="subscribe.html">Subscribe</a>
+                        <a href="signup.html">Sign Up</a>
+                        <a href="signin.html">Sign In</a>
                     </div>
                 </li>
             </ul>
         </nav>
     </header>
-
     <main class="container">
         <section class="hero">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for teams, players, news...">
+                <button onclick="alert('Search feature coming soon!')">Search</button>
+            </div>
             <div class="next-match">
                 <h2>Next Match</h2>
                 <p>Real Madrid vs. Barcelona</p>
@@ -48,16 +52,10 @@
                     <span>Seconds</span>
                 </div>
             </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search for teams, players, news...">
-                <button>Search</button>
-            </div>
         </section>
-    
-
         <section class="latest-news">
             <h2>Latest News</h2>
-            <div class="news-carousel">
+            <div class="news-carousel vertical-news">
                 <div class="news-item">
                     <h3>Messi Wins Ballon d'Or</h3>
                     <p>Lionel Messi has won his record-breaking eighth Ballon d'Or award.</p>
@@ -68,13 +66,11 @@
                 </div>
             </div>
         </section>
-
-
         <!-- YouTube Section -->
         <section class="youtube-section">
             <h2>Watch Highlights</h2>
             <div id="youtube-container">
-                <iframe id="youtube-frame" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                <iframe id="youtube-frame" width="560" height="315" style="display:none;" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="youtube-link-input">
                 <input type="text" id="youtube-url" placeholder="Paste YouTube video URL here">
@@ -83,15 +79,46 @@
         </section>
     </main>
     <section class="cta">
-            <h2>Get the Latest Football Updates</h2>
-            <button>Subscribe Now</button>
-            <button>Follow Us</button>
-        </section>
-
+        <h2>Get the Latest Football Updates</h2>
+        <button onclick="alert('Subscribed!')">Subscribe Now</button>
+        <button onclick="alert('Follow us on social media!')">Follow Us</button>
+        <button onclick="window.location.href='signup.html'">Sign Up</button>
+        <button onclick="window.location.href='signin.html'">Sign In</button>
+    </section>
     <footer class="footer">
         <p>&copy; 2025 FootballBuddy</p>
     </footer>
-
     <script src="js/script.js"></script>
+    <script>
+function toggleMobileNav() {
+    var navUl = document.getElementById('main-nav');
+    navUl.classList.toggle('active');
+}
+// Responsive YouTube embed
+function updateYouTubeLink() {
+    const urlInput = document.getElementById('youtube-url').value;
+    const frame = document.getElementById('youtube-frame');
+    let videoId = '';
+    try {
+        const url = new URL(urlInput);
+        if (url.hostname === 'youtu.be') {
+            videoId = url.pathname.slice(1);
+        } else if (url.hostname.includes('youtube.com')) {
+            videoId = url.searchParams.get('v');
+        }
+    } catch (e) {
+        const match = urlInput.match(/(?:v=|\/)([0-9A-Za-z_-]{11})/);
+        if (match) videoId = match[1];
+    }
+    if (videoId) {
+        frame.src = `https://www.youtube.com/embed/${videoId}`;
+        frame.style.display = 'block';
+    } else {
+        frame.src = '';
+        frame.style.display = 'none';
+        alert('Please enter a valid YouTube URL.');
+    }
+}
+</script>
 </body>
 </html>

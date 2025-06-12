@@ -12,8 +12,9 @@
         <img src="../assets/img/logo.png" alt="FootballBuddy Logo">
         <h1>FootballBuddy</h1>
     </div>
+    <button class="mobile-nav-toggle" aria-label="Open navigation" onclick="toggleMobileNav()">&#9776;</button>
     <nav>
-        <ul>
+        <ul id="main-nav">
             <li><a href="../index.html">Home</a></li>
             <li><a href="news.html">News</a></li>
             <li><a href="scores.html">Scores</a></li>
@@ -23,11 +24,12 @@
             <li class="dropdown">
                 <a href="#" class="dropbtn">More Pages</a>
                 <div class="dropdown-content">
-                    <a href="news.html">News</a>
-                    <a href="scores.html">Scores</a>
-                    <a href="teams.html">Teams</a>
-                    <a href="players.html">Players</a>
-                    <a href="blog.html">Blog</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="subscribe.html">Subscribe</a>
+                    <a href="signup.html">Sign Up</a>
+                    <a href="signin.html">Sign In</a>
                 </div>
             </li>
         </ul>
@@ -59,5 +61,11 @@
     </footer>
 
     <script src="../js/script.js"></script>
+    <script>
+function toggleMobileNav() {
+    var navUl = document.getElementById('main-nav');
+    navUl.classList.toggle('active');
+}
+</script>
 </body>
 </html>

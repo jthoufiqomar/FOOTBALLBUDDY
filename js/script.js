@@ -19,32 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    async function addBlogPost() {
-        const title = document.getElementById('blog-title').value.trim();
-        const content = document.getElementById('blog-content').value.trim();
-        if (!title || !content) {
-            alert('Please enter both a title and content.');
-            return;
-        }
-        const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTc0OTYzNTUzMywiZXhwIjoxNzQ5NzIxOTMzfQ.9D1Jtb9WTqq4SJt1BS83LOOsZA77YuxRrJDdNg370jg';
-        try {
-            const res = await fetch('https://footballbuddy-backend.onrender.com/api/posts', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + token
-                },
-                body: JSON.stringify({ title, content })
-            });
-            if (!res.ok) throw new Error('Failed to post blog');
-            document.getElementById('blog-title').value = '';
-            document.getElementById('blog-content').value = '';
-            fetchBlogs();
-        } catch (err) {
-            alert('Failed to post blog. Please try again later.');
-        }
-    }
-
     // YouTube video update
     window.updateYouTubeLink = function() {
         const urlInput = document.getElementById('youtube-url').value;
@@ -73,3 +47,30 @@ document.addEventListener('DOMContentLoaded', function() {
         fetchBlogs();
     }
 });
+
+async function addBlogPost() {
+    const title = document.getElementById('blog-title').value.trim();
+    const content = document.getElementById('blog-content').value.trim();
+    if (!title || !content) {
+        alert('Please enter both a title and content.');
+        return;
+    }
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTc0OTYzNTUzMywiZXhwIjoxNzQ5NzIxOTMzfQ.9D1Jtb9WTqq4SJt1BS83LOOsZA77YuxRrJDdNg370jg';
+    try {
+        const res = await fetch('https://footballbuddy-backend.onrender.com/api/posts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
+            },
+            body: JSON.stringify({ title, content })
+        });
+        if (!res.ok) throw new Error('Failed to post blog');
+        document.getElementById('blog-title').value = '';
+        document.getElementById('blog-content').value = '';
+        fetchBlogs();
+    } catch (err) {
+        alert('Failed to post blog. Please try again later.');
+    }
+}
+window.addBlogPost = addBlogPost;

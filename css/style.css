@@ -394,3 +394,302 @@ nav a:hover {
     justify-content: center;
     gap: 0.5rem;
 }
+
+/* Blog writing area full width */
+#blog-content {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 100vw;
+    min-height: 60vh;
+    margin-left: calc(-1 * (100vw - 100%) / 2);
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    background: #fff;
+}
+
+/* Optional: Make the blog post form container also full width */
+#blog-form, .blog-form {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(-1 * (100vw - 100%) / 2);
+    box-sizing: border-box;
+}
+
+/* --- Responsive Header and Navigation --- */
+@media (max-width: 768px) {
+    header {
+        padding-top: 10px;
+        min-height: 50px;
+    }
+    .logo {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: #1e3a8a;
+        position: static;
+    }
+    nav li {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: left;
+    }
+    nav a {
+        padding: 12px 20px;
+        border-radius: 0;
+        border-bottom: 1px solid #233a6a;
+        font-size: 1.1em;
+    }
+    .dropdown-content {
+        position: static;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .dropdown-content a {
+        padding: 10px 20px;
+    }
+}
+
+/* --- Responsive Hero Section --- */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 0;
+        gap: 1rem;
+    }
+    .next-match {
+        text-align: left;
+        padding: 0 0.5rem;
+    }
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding: 0 0.5rem;
+        margin-top: 1rem;
+    }
+    .search-bar input {
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 0.5rem;
+    }
+    .search-bar button {
+        width: 100%;
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+/* --- Hamburger Menu for Mobile --- */
+@media (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 2em;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 1001;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100vw;
+        background: #1e3a8a;
+        position: absolute;
+        left: 0;
+        top: 60px;
+        z-index: 1000;
+    }
+    nav ul.active {
+        display: flex;
+    }
+    nav li {
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+    nav a {
+        padding: 16px 24px;
+        border-radius: 0;
+        border-bottom: 1px solid #233a6a;
+        font-size: 1.1em;
+    }
+    .dropdown-content {
+        position: static;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .dropdown-content a {
+        padding: 10px 20px;
+    }
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding: 0 0.5rem;
+        margin-bottom: 1rem;
+    }
+    .search-bar input {
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 0.5rem;
+    }
+    .search-bar button {
+        width: 100%;
+        border-radius: 0 0 5px 5px;
+    }
+    .next-match {
+        text-align: left;
+        padding: 0 0.5rem;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .news-carousel.vertical-news {
+        flex-direction: column;
+        max-width: 100%;
+        width: 100%;
+    }
+    .news-item {
+        min-width: 0;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    #youtube-frame {
+        width: 100% !important;
+        min-width: 0;
+        height: 220px !important;
+    }
+}
+
+/* --- Utility: Hide hamburger on desktop --- */
+@media (min-width: 769px) {
+    .mobile-nav-toggle {
+        display: none;
+    }
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+        padding: 0 1rem;
+    }
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search-bar input {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+    header, .footer {
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav li {
+        margin: 10px 0;
+    }
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 0;
+    }
+    .news-carousel, .latest-news, .youtube-section {
+        max-width: 100%;
+        padding: 1rem 0.5rem;
+    }
+    .blog-form, #blog-form {
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: 0;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+    }
+    #blog-content {
+        width: 100vw;
+        max-width: 100vw;
+        min-width: 100vw;
+        margin-left: 0;
+        min-height: 40vh;
+    }
+    .player-grid {
+        grid-template-columns: 1fr;
+    }
+    .news-item, .blog-post, .player-card {
+        min-width: 0;
+        width: 100%;
+    }
+    #youtube-frame {
+        width: 100% !important;
+        min-width: 0;
+        height: 220px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.2rem;
+    }
+    .logo img {
+        width: 36px;
+    }
+    header h1 {
+        font-size: 1.2em;
+    }
+    .search-bar input {
+        width: 100%;
+        font-size: 1em;
+    }
+    .blog-form input[type="text"] {
+        width: 100%;
+        font-size: 1em;
+    }
+    #blog-content {
+        font-size: 1em;
+        min-height: 30vh;
+    }
+    .news-item, .blog-post, .player-card {
+        padding: 10px;
+    }
+    .youtube-section {
+        padding: 1rem 0.2rem;
+    }
+}
+
+img, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
