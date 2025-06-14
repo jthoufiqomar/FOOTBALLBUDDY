@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FootballBuddy - Kevin De Bruyne</title>
+    <link rel="stylesheet" href="../css/dynamic-matchday-hub-theme.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -12,8 +13,12 @@
             <img src="../assets/img/logo.png" alt="FootballBuddy Logo">
             <h1>FootballBuddy</h1>
         </div>
+        <div class="live-score">
+            <span>Live: Real Madrid 2 - 1 Barcelona</span>
+        </div>
+        <button class="mobile-nav-toggle" aria-label="Open navigation" onclick="toggleMobileNav()">&#9776;</button>
         <nav>
-            <ul>
+            <ul id="main-nav">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="news.html">News</a></li>
                 <li><a href="scores.html">Scores</a></li>
@@ -23,33 +28,64 @@
                 <li class="dropdown">
                     <a href="#" class="dropbtn">More Pages</a>
                     <div class="dropdown-content">
-                        <a href="news.html">News</a>
-                        <a href="scores.html">Scores</a>
-                        <a href="teams.html">Teams<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FootballBuddy - Kevin De Bruyne</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="../assets/img/logo.png" alt="FootballBuddy Logo">
-            <h1>FootballBuddy</h1>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="subscribe.html">Subscribe</a>
+                        <a href="signup.html">Sign Up</a>
+                        <a href="signin.html">Sign In</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="player-profile card" style="max-width:400px;margin:auto;">
+            <h2>Kevin De Bruyne</h2>
+            <img src="https://via.placeholder.com/200x250" alt="Kevin De Bruyne" style="border-radius:8px;">
+            <p>Position: Midfielder</p>
+            <p>Team: Manchester City</p>
+            <p>Date of Birth: June 28, 1991</p>
+            <p>Nationality: Belgian</p>
+        </section>
+        <section class="match-highlights">
+            <h2>Match Highlights</h2>
+            <div class="highlight">
+                <h3>Manchester City vs Liverpool</h3>
+                <p>Kevin De Bruyne scored a stunning goal from outside the box and provided an assist in a thrilling 3-2 victory.</p>
+            </div>
+            <div class="highlight">
+                <h3>Manchester City vs Chelsea</h3>
+                <p>De Bruyne dominated the midfield, scoring one goal and assisting another in a 2-1 win.</p>
+            </div>
+        </section>
+        <section class="news">
+            <h2>Latest News</h2>
+            <article>
+                <h3>De Bruyne's Injury Update</h3>
+                <p>Kevin De Bruyne is set to return to action next week after recovering from a minor injury. Manager Pep Guardiola confirmed that the midfielder has resumed training and is available for selection.</p>
+            </article>
+            <article>
+                <h3>Transfer Rumors: De Bruyne to Barcelona?</h3>
+                <p>Speculation is rife about Kevin De Bruyne potentially moving to Barcelona in the summer transfer window. However, both Manchester City and De Bruyne have dismissed these rumors as unfounded.</p>
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2rem;">
+            <div>
+                <a href="https://youtube.com" target="_blank" style="color:#fff;margin-right:1rem;"><i class="fa fa-youtube-play"></i></a>
+                <a href="#" style="color:#fff;margin-right:1rem;"><i class="fa fa-twitter"></i></a>
+                <a href="#" style="color:#fff;"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div>
+                <a href="about.html" style="color:#fff;margin-right:1rem;">About</a>
+                <a href="contact.html" style="color:#fff;margin-right:1rem;">Contact</a>
+                <a href="feedback.html" style="color:#fff;">Feedback</a>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="scores.html">Scores</a></li>
-                <li><a href="teams.html">Teams</a></li>
-                <li><a href="players.html">Players</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">More Pages</a>
-                    <div class="dropdown-content">
-                        <a href="news.html">News</a>
-                        <a href="scores.html">Scores</a>
-                        <a href="teams.html">Teams
+        <p style="margin-top:1rem;">&copy; 2025 FootballBuddy</p>
+    </footer>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+</body>
+</html>

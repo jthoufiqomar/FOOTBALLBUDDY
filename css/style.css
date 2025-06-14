@@ -693,3 +693,217 @@ img, iframe {
     height: auto;
     display: block;
 }
+
+/* Dynamic Matchday Hub - Tactical Board Theme */
+:root {
+    --primary-green: #145a32;
+    --dark-bg: #181a1b;
+    --card-bg: #232526;
+    --white: #f7f7f7;
+    --accent-red: #e74c3c;
+    --accent-yellow: #ffe600;
+    --muted: #6c757d;
+    --border: #2c2f31;
+    --shadow: 0 2px 12px rgba(20,90,50,0.12);
+    --font-heading: 'Oswald', 'Bebas Neue', Arial, sans-serif;
+    --font-body: 'Roboto', 'Open Sans', Arial, sans-serif;
+}
+
+body {
+    background: var(--dark-bg);
+    color: var(--white);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: var(--primary-green);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.1em;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+header nav a:hover, header nav .current a {
+    background: var(--accent-red);
+    color: var(--white);
+}
+
+.live-score {
+    background: var(--accent-yellow);
+    color: #222;
+    font-weight: bold;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-family: var(--font-heading);
+    font-size: 1.1em;
+    box-shadow: 0 2px 8px rgba(255,230,0,0.12);
+    margin-left: 2rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: linear-gradient(90deg, var(--primary-green) 60%, var(--accent-red) 100%);
+    color: var(--white);
+    border-radius: 16px;
+    padding: 2rem 2rem 1.5rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .search-bar input {
+    padding: 12px;
+    border-radius: 6px 0 0 6px;
+    border: none;
+    width: 220px;
+    background: #222;
+    color: var(--white);
+}
+
+.hero .search-bar button {
+    padding: 12px 18px;
+    border-radius: 0 6px 6px 0;
+    border: none;
+    background: var(--accent-red);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.hero .search-bar button:hover {
+    background: var(--accent-yellow);
+    color: #222;
+}
+
+.card, .news-item, .player-card, .team-card, .blog-post {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover, .news-item:hover, .player-card:hover, .team-card:hover, .blog-post:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 24px var(--accent-red);
+}
+
+.cta button, .btn, .blog-post button, .player-card button, .team-card button {
+    background: var(--accent-red);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    margin: 0 10px 10px 0;
+    font-size: 1.1em;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(231,76,60,0.12);
+}
+
+.cta button:hover, .btn:hover {
+    background: var(--accent-yellow);
+    color: #222;
+    box-shadow: 0 4px 16px var(--accent-yellow);
+}
+
+input, textarea, select {
+    background: #232526;
+    color: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 1rem;
+    transition: border 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--accent-yellow);
+    outline: none;
+}
+
+.footer {
+    background: var(--primary-green);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 1.1em;
+    margin-top: 2rem;
+    border-radius: 0 0 18px 18px;
+}
+
+/* Responsive Grid */
+@media (max-width: 900px) {
+    .container {
+        padding: 1rem;
+    }
+    .hero {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        gap: 1rem;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 0.5rem;
+    }
+    .hero {
+        padding: 1rem 0.5rem;
+    }
+}

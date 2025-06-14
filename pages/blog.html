@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FootballBuddy - Blog</title>
+    <link rel="stylesheet" href="../css/dynamic-matchday-hub-theme.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -12,8 +13,12 @@
         <img src="../assets/img/logo.png" alt="FootballBuddy Logo">
         <h1>FootballBuddy</h1>
     </div>
+    <div class="live-score">
+        <span>Live: Real Madrid 2 - 1 Barcelona</span>
+    </div>
+    <button class="mobile-nav-toggle" aria-label="Open navigation" onclick="toggleMobileNav()">&#9776;</button>
     <nav>
-        <ul>
+        <ul id="main-nav">
             <li><a href="../index.html">Home</a></li>
             <li><a href="news.html">News</a></li>
             <li><a href="scores.html">Scores</a></li>
@@ -23,11 +28,12 @@
             <li class="dropdown">
                 <a href="#" class="dropbtn">More Pages</a>
                 <div class="dropdown-content">
-                    <a href="news.html">News</a>
-                    <a href="scores.html">Scores</a>
-                    <a href="teams.html">Teams</a>
-                    <a href="players.html">Players</a>
-                    <a href="blog.html">Blog</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="subscribe.html">Subscribe</a>
+                    <a href="signup.html">Sign Up</a>
+                    <a href="signin.html">Sign In</a>
                 </div>
             </li>
         </ul>
@@ -40,19 +46,31 @@
             <div id="blog-list">
                 <!-- Blog posts will be dynamically inserted here -->
             </div>
-            <div class="blog-form">
+            <div class="blog-form card" style="margin-top:2rem;">
                 <h3>Write a New Blog Post</h3>
                 <input type="text" id="blog-title" placeholder="Blog Title" required>
                 <textarea id="blog-content" placeholder="Write your blog here..." rows="6" required></textarea>
-                <button onclick="addBlogPost()">Post Blog</button>
+                <button class="btn" onclick="addBlogPost()">Post Blog</button>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 FootballBuddy</p>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2rem;">
+            <div>
+                <a href="https://youtube.com" target="_blank" style="color:#fff;margin-right:1rem;"><i class="fa fa-youtube-play"></i></a>
+                <a href="#" style="color:#fff;margin-right:1rem;"><i class="fa fa-twitter"></i></a>
+                <a href="#" style="color:#fff;"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div>
+                <a href="about.html" style="color:#fff;margin-right:1rem;">About</a>
+                <a href="contact.html" style="color:#fff;margin-right:1rem;">Contact</a>
+                <a href="feedback.html" style="color:#fff;">Feedback</a>
+            </div>
+        </div>
+        <p style="margin-top:1rem;">&copy; 2025 FootballBuddy</p>
     </footer>
-
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
 </body>
 </html>

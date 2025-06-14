@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FootballBuddy - News</title>
+    <link rel="stylesheet" href="../css/dynamic-matchday-hub-theme.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -11,6 +12,9 @@
         <div class="logo">
             <img src="../assets/img/logo.png" alt="FootballBuddy Logo">
             <h1>FootballBuddy</h1>
+        </div>
+        <div class="live-score">
+            <span>Live: Real Madrid 2 - 1 Barcelona</span>
         </div>
         <button class="mobile-nav-toggle" aria-label="Open navigation" onclick="toggleMobileNav()">&#9776;</button>
         <nav>
@@ -39,34 +43,46 @@
     <main class="container">
         <section class="news">
             <h2>Latest Football News</h2>
-            <div class="news-item">
+            <div class="news-item card">
                 <img src="https://via.placeholder.com/350x200" alt="News Thumbnail">
                 <h3>Messi Wins Ballon d'Or</h3>
                 <p class="date">June 9, 2025</p>
                 <p>Lionel Messi has won his record-breaking eighth Ballon d'Or award. The Argentine superstar beat out competition from Erling Haaland and Kylian Mbappé to claim the prestigious prize.</p>
-                <a href="#">Read More</a>
+                <a class="btn" href="#">Read More</a>
             </div>
-            <div class="news-item">
+            <div class="news-item card">
                 <img src="https://via.placeholder.com/350x200" alt="News Thumbnail">
                 <h3>Ronaldo Scores Hat-Trick</h3>
                 <p class="date">June 8, 2025</p>
                 <p>Cristiano Ronaldo scored a hat-trick in Al Nassr's latest match, continuing his impressive goal-scoring form. The Portuguese legend has now scored over 850 career goals.</p>
-                <a href="#">Read More</a>
+                <a class="btn" href="#">Read More</a>
             </div>
-            <div class="news-item">
+            <div class="news-item card">
                 <img src="https://via.placeholder.com/350x200" alt="News Thumbnail">
                 <h3>Liverpool Signs New Defender</h3>
                 <p class="date">June 7, 2025</p>
                 <p>Liverpool has completed the signing of a new defender from RB Leipzig. The highly-rated youngster is expected to bolster the Reds' defensive options.</p>
-                <a href="#">Read More</a>
+                <a class="btn" href="#">Read More</a>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 FootballBuddy</p>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2rem;">
+            <div>
+                <a href="https://youtube.com" target="_blank" style="color:#fff;margin-right:1rem;"><i class="fa fa-youtube-play"></i></a>
+                <a href="#" style="color:#fff;margin-right:1rem;"><i class="fa fa-twitter"></i></a>
+                <a href="#" style="color:#fff;"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div>
+                <a href="about.html" style="color:#fff;margin-right:1rem;">About</a>
+                <a href="contact.html" style="color:#fff;margin-right:1rem;">Contact</a>
+                <a href="feedback.html" style="color:#fff;">Feedback</a>
+            </div>
+        </div>
+        <p style="margin-top:1rem;">&copy; 2025 FootballBuddy</p>
     </footer>
-
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
     <script>
     function toggleMobileNav() {

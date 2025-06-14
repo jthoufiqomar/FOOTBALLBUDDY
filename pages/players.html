@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FootballBuddy - Players</title>
+    <link rel="stylesheet" href="../css/dynamic-matchday-hub-theme.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -11,6 +12,9 @@
         <div class="logo">
             <img src="../assets/img/logo.png" alt="FootballBuddy Logo">
             <h1>FootballBuddy</h1>
+        </div>
+        <div class="live-score">
+            <span>Live: Real Madrid 2 - 1 Barcelona</span>
         </div>
         <button class="mobile-nav-toggle" aria-label="Open navigation" onclick="toggleMobileNav()">&#9776;</button>
         <nav>
@@ -39,7 +43,7 @@
     <main class="container">
         <section class="players">
             <h2>Football Players</h2>
-            <div class="search-filter">
+            <div class="search-filter" style="margin-bottom:1.5rem;">
                 <input type="text" id="search-input" placeholder="Search players...">
                 <select id="position-filter">
                     <option value="">All Positions</option>
@@ -49,15 +53,26 @@
                     <option value="goalkeeper">Goalkeeper</option>
                 </select>
             </div>
-            <div class="player-grid" id="player-grid">
-            </div>
+            <div class="player-grid" id="player-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;"></div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 FootballBuddy</p>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2rem;">
+            <div>
+                <a href="https://youtube.com" target="_blank" style="color:#fff;margin-right:1rem;"><i class="fa fa-youtube-play"></i></a>
+                <a href="#" style="color:#fff;margin-right:1rem;"><i class="fa fa-twitter"></i></a>
+                <a href="#" style="color:#fff;"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div>
+                <a href="about.html" style="color:#fff;margin-right:1rem;">About</a>
+                <a href="contact.html" style="color:#fff;margin-right:1rem;">Contact</a>
+                <a href="feedback.html" style="color:#fff;">Feedback</a>
+            </div>
+        </div>
+        <p style="margin-top:1rem;">&copy; 2025 FootballBuddy</p>
     </footer>
-
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
     <script src="../js/players.js"></script>
     <script>

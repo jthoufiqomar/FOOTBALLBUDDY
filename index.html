@@ -13,6 +13,9 @@
             <img src="assets/img/logo.png" alt="FootballBuddy Logo">
             <h1>FootballBuddy</h1>
         </div>
+        <div class="live-score">
+            <span>Live: Real Madrid 2 - 1 Barcelona</span>
+        </div>
         <button class="mobile-nav-toggle" aria-label="Open navigation" onclick="toggleMobileNav()">&#9776;</button>
         <nav>
             <ul id="main-nav">
@@ -38,59 +41,82 @@
     </header>
     <main class="container">
         <section class="hero">
-            <div class="search-bar">
-                <input type="text" placeholder="Search for teams, players, news...">
-                <button onclick="alert('Search feature coming soon!')">Search</button>
+            <div class="hero-image" style="flex:1; min-width:220px;">
+                <img src="assets/img/logo.png" alt="Matchday Hero" style="width:100%;max-width:340px;border-radius:16px;box-shadow:0 4px 24px #0002;">
             </div>
-            <div class="next-match">
-                <h2>Next Match</h2>
-                <p>Real Madrid vs. Barcelona</p>
-                <p>June 15, 2025 - 8:00 PM</p>
-                <div id="countdown">
-                    <span>Days</span>
-                    <span>Hours</span>
-                    <span>Minutes</span>
-                    <span>Seconds</span>
+            <div style="flex:2;min-width:220px;">
+                <h2 style="font-family:var(--font-heading);font-size:2.2em;">Welcome to the Dynamic Matchday Hub</h2>
+                <p style="font-size:1.2em;">Your all-in-one football destination: live scores, news, blogs, player spotlights, and matchday highlights.</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for teams, players, news...">
+                    <button onclick="alert('Search feature coming soon!')">Search</button>
                 </div>
             </div>
         </section>
         <section class="latest-news">
             <h2>Latest News</h2>
             <div class="news-carousel vertical-news">
-                <div class="news-item">
+                <article class="news-item card">
+                    <img src="assets/img/placeholder.png" alt="Messi Ballon d'Or" style="width:100%;max-width:180px;float:left;margin-right:1rem;">
                     <h3>Messi Wins Ballon d'Or</h3>
                     <p>Lionel Messi has won his record-breaking eighth Ballon d'Or award.</p>
-                </div>
-                <div class="news-item">
+                    <a class="btn" href="#">Read More</a>
+                </article>
+                <article class="news-item card">
+                    <img src="assets/img/placeholder.png" alt="Ronaldo Hat-Trick" style="width:100%;max-width:180px;float:left;margin-right:1rem;">
                     <h3>Ronaldo Scores Hat-Trick</h3>
                     <p>Cristiano Ronaldo scores a hat-trick in Al Nassr's latest match.</p>
-                </div>
+                    <a class="btn" href="#">Read More</a>
+                </article>
             </div>
         </section>
-        <!-- YouTube Section -->
+        <!-- Blog Section (dynamic from Supabase) -->
+        <section class="blog-section" id="blog-section">
+            <h2>Latest Blog Posts</h2>
+            <!-- Blog posts will be loaded here by supabase-client.js -->
+        </section>
         <section class="youtube-section">
-            <h2>Watch Highlights</h2>
+            <h2>YouTube Highlights</h2>
+            <div class="youtube-card card" style="display:flex;align-items:center;gap:1.5rem;">
+                <img src="https://img.youtube.com/vi/4b6bwcWK6GE/hqdefault.jpg" alt="YouTube Highlight" style="width:180px;border-radius:8px;">
+                <div style="flex:1;">
+                    <h3>Post-Match Reactions</h3>
+                    <button class="btn" onclick="document.getElementById('youtube-frame').scrollIntoView({behavior:'smooth'});">Watch Now</button>
+                </div>
+            </div>
             <div id="youtube-container">
                 <iframe id="youtube-frame" width="560" height="315" src="https://www.youtube.com/embed/4b6bwcWK6GE" style="display:block;" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <!-- Only show the input if the user is an editor (hidden for normal users) -->
-            <div class="youtube-link-input" style="display:none;">
-                <input type="text" id="youtube-url" placeholder="Paste YouTube video URL here">
-                <button onclick="updateYouTubeLink()">Change Video</button>
             </div>
         </section>
     </main>
     <section class="cta">
         <h2>Get the Latest Football Updates</h2>
-        <button onclick="alert('Subscribed!')">Subscribe Now</button>
-        <button onclick="alert('Follow us on social media!')">Follow Us</button>
-        <button onclick="window.location.href='signup.html'">Sign Up</button>
-        <button onclick="window.location.href='signin.html'">Sign In</button>
+        <form class="subscribe-form" style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;align-items:center;">
+            <input type="email" placeholder="Enter your email to subscribe" required style="min-width:220px;">
+            <button type="submit" class="btn">Subscribe Now</button>
+        </form>
+        <button class="btn" onclick="alert('Follow us on social media!')">Follow Us</button>
+        <button class="btn" onclick="window.location.href='signup.html'">Sign Up</button>
+        <button class="btn" onclick="window.location.href='signin.html'">Sign In</button>
     </section>
     <footer class="footer">
-        <p>&copy; 2025 FootballBuddy</p>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2rem;">
+            <div>
+                <a href="https://youtube.com" target="_blank" style="color:#fff;margin-right:1rem;"><i class="fa fa-youtube-play"></i></a>
+                <a href="#" style="color:#fff;margin-right:1rem;"><i class="fa fa-twitter"></i></a>
+                <a href="#" style="color:#fff;"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div>
+                <a href="about.html" style="color:#fff;margin-right:1rem;">About</a>
+                <a href="contact.html" style="color:#fff;margin-right:1rem;">Contact</a>
+                <a href="feedback.html" style="color:#fff;">Feedback</a>
+            </div>
+        </div>
+        <p style="margin-top:1rem;">&copy; 2025 FootballBuddy</p>
     </footer>
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="js/supabase-client.js"></script>
     <script>
 function toggleMobileNav() {
     var navUl = document.getElementById('main-nav');
@@ -111,7 +137,7 @@ function updateYouTubeLink() {
             videoId = url.searchParams.get('v');
         }
     } catch (e) {
-        const match = urlInput.match(/(?:v=|\/)([0-9A-Za-z_-]{11})/);
+        const match = urlInput.match(/(?:v=|\/)([0-9A-ZaZ_-]{11})/);
         if (match) videoId = match[1];
     }
     if (videoId) {
@@ -124,5 +150,6 @@ function updateYouTubeLink() {
     }
 }
 </script>
+<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
 </body>
 </html>
