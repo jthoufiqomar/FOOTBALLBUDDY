@@ -1,0 +1,214 @@
+/* Dynamic Matchday Hub Inspired Theme for FootballBuddy */
+
+:root {
+    --primary: #1e3a8a; /* Deep blue */
+    --secondary: #e8491d; /* Vibrant orange */
+    --accent: #2ecc71; /* Green */
+    --background: #f4f7fa; /* Light background */
+    --card-bg: #fff;
+    --text: #222;
+    --muted: #6c757d;
+    --border: #e0e0e0;
+    --shadow: 0 2px 12px rgba(30,58,138,0.07);
+}
+
+body {
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+
+header, .footer {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover, nav .current a {
+    background: var(--secondary);
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: linear-gradient(90deg, var(--primary) 60%, var(--secondary) 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 2rem 2rem 1.5rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .search-bar input {
+    padding: 12px;
+    border-radius: 6px 0 0 6px;
+    border: none;
+    width: 220px;
+}
+
+.hero .search-bar button {
+    padding: 12px 18px;
+    border-radius: 0 6px 6px 0;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.hero .search-bar button:hover {
+    background: var(--secondary);
+}
+
+.next-match {
+    background: rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 1.2rem 2rem;
+    box-shadow: var(--shadow);
+    color: #fff;
+    text-align: center;
+}
+
+.latest-news, .youtube-section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.latest-news h2, .youtube-section h2 {
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+}
+
+.news-carousel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+}
+
+.news-item {
+    min-width: 260px;
+    background: #f8fafc;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    border: 1px solid var(--border);
+}
+
+.cta {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cta button {
+    background: var(--secondary);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    margin: 0 10px 10px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cta button:hover {
+    background: var(--accent);
+}
+
+.footer {
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 2rem;
+}
+
+/* Cards for players, teams, blog, etc. */
+.card, .player-card, .team-card, .blog-post {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+}
+
+.card img, .player-card img, .team-card img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        width: 98%;
+        padding: 1rem;
+    }
+    .hero {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 0.5rem;
+    }
+    .hero {
+        padding: 1rem 0.5rem;
+    }
+    .news-carousel {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .news-item {
+        min-width: 0;
+        width: 100%;
+    }
+}

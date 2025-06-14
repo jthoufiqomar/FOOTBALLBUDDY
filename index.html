@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FootballBuddy - Home</title>
+    <link rel="stylesheet" href="css/dynamic-matchday-hub-theme.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -70,9 +71,10 @@
         <section class="youtube-section">
             <h2>Watch Highlights</h2>
             <div id="youtube-container">
-                <iframe id="youtube-frame" width="560" height="315" style="display:none;" frameborder="0" allowfullscreen></iframe>
+                <iframe id="youtube-frame" width="560" height="315" src="https://www.youtube.com/embed/4b6bwcWK6GE" style="display:block;" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="youtube-link-input">
+            <!-- Only show the input if the user is an editor (hidden for normal users) -->
+            <div class="youtube-link-input" style="display:none;">
                 <input type="text" id="youtube-url" placeholder="Paste YouTube video URL here">
                 <button onclick="updateYouTubeLink()">Change Video</button>
             </div>
@@ -95,7 +97,9 @@ function toggleMobileNav() {
     navUl.classList.toggle('active');
 }
 // Responsive YouTube embed
+// Only allow editor to change video (input hidden for normal users)
 function updateYouTubeLink() {
+    // This function is now only for editor use
     const urlInput = document.getElementById('youtube-url').value;
     const frame = document.getElementById('youtube-frame');
     let videoId = '';
